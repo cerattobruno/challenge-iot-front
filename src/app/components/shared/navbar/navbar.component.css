@@ -1,0 +1,4 @@
+.nav-pills>li>a.active {
+    background-color: #0b4447!important;
+    color: beige;
+}

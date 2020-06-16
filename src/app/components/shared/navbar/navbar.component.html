@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+
+    <!-- <a class="navbar-brand fondonav" [routerLink]="['/home']" [routerLinkActive]="['active']">
+
+        <img src="../../../assets/imagenes/logo2.png" width="30" height="30" alt=""> FastCred
+    </a> -->
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navappal">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+            <a class="nav-item nav-link" [routerLink]="['/listDevice']" [routerLinkActive]="['active']">List of Devices</a>
+            <a class="nav-item nav-link" [routerLink]="['/newDevice']" [routerLinkActive]="['active']">New Device</a>
+        </div>
+    </div> -->
+
+    <div class="collapse navbar-collapse" id="navappal">
+        <ul class="navbar-nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+            <li class="nav-item ">
+                <a class="nav-link" [routerLink]="['/listDevice']" [routerLinkActive]="['active']">List of devices</a></li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/newDevice']" [routerLinkActive]="['active']">New Device</a></li>
+        </ul>
+    </div>
+</nav>

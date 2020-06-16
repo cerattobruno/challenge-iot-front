@@ -1,0 +1,18 @@
+.numeros {
+    font-size: 50px;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'barlow-bolditalic', sans-serif;
+    font-weight: 800;
+    line-height: 72px;
+    margin: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0b4447;
+}
+
+.rounded {
+    border-radius: .80rem!important;
+}

@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-md-8 m-auto">
+        <h4 class="text-center"> Save new device</h4>
+        <form class="ml-md-0  ml-sm-0" #formDevice="ngForm" (ngSubmit)="onSubmit();formDevice.reset()">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group input-group">
+                        <input [ngClass]="{'input-missing' : id.touched && !id.valid}" type="number" class="form-control rounded" name="id" #id="ngModel" [(ngModel)]="newDevice.id" required placeholder="Id">
+
+                    </div>
+                    <div class="form-group input-group">
+                        <input [ngClass]="{'input-missing' : lat.touched && !lat.valid}" type="number" class="form-control rounded" name="lat" #lat="ngModel" [(ngModel)]="newDevice.lat" required placeholder="Latitude">
+
+                    </div>
+                    <div class="form-group input-group">
+                        <input [ngClass]="{'input-missing' : lng.touched && !lng.valid}" type="number" class="form-control rounded" name="lng" #lng="ngModel" [(ngModel)]="newDevice.lng" placeholder="Logitude">
+
+                    </div>
+
+                    <div class="form-group input-group">
+                        <select class="form-control rounded" name="zone" #zone="ngModel" [(ngModel)]="newDevice.zone" placeholder="Zone">
+                            <option selected value="">Zone</option>
+                            <option *ngFor="let zone of zones" value="{{zone}}">{{zone}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-check custom-control-inline">
+                        <input [ngClass]="{'input-missing' : id.touched && !id.valid}" class="form-check-input" type="radio" name="estado" id="estadoactivo" value="1" [(ngModel)]="newDevice.state" checked>
+                        <label class="form-check-label" for="estadoactivo">
+                            <p>ON</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check custom-control-inline">
+                        <input [ngClass]="{'input-missing' : id.touched && !id.valid}" class="form-check-input" type="radio" name="estado" id="estadoactivo" value="0" [(ngModel)]="newDevice.state">
+                        <label class="form-check-label" for="estadoactivo">
+                            <p>OFF</p>
+                        </label>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger w-25 m-auto rounded" [disabled]="!formDevice.form.valid">Save</button>
+                    </div>
+                    <br>
+
+                    <div *ngIf="saved" class="alert alert-success alert-dismissible fade show" role="alert">
+                        The device was successfully saved!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
